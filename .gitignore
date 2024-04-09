@@ -1,0 +1,11 @@
+QTensor/
+__pycache__/
+
+ws-energies/ws-confs/
+ws-energies/weighted-energies/
+ws-energies/subgraph-optimization/
+ws-energies/combined-landscapes/
+ws-energies/3reg_0-1_edge/
+ws-energies/3-reg_1/
+
+out.log
