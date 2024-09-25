@@ -1,7 +1,7 @@
 import networkx as nx
 import numpy as np
 from networkx import Graph
-from qiskit import Aer, execute, BasicAer
+from qiskit_aer import Aer
 from typing import *
 
 import cvxpy as cp
@@ -54,7 +54,7 @@ def get_energy(G, qaoa_qc, gamma, beta, edge, sim=Aer.get_backend('statevector_s
     qaoa_instance.measure_all()
 
   #execute circuit
-  result = execute(qaoa_instance, sim, shots=shots).result()
+  result = sim.run(qaoa_instance, shots=shots).result()
 
   #calculate energy
   energy = 0
