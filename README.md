@@ -1,5 +1,5 @@
 # Parameter Transfer for Warm-Started QAOA
-### Setup (exemplary for Ubuntu): 
+### Setup (exemplary for Ubuntu and Python 3.12): 
 * ``git clone https://github.com/UST-QuAntiL/Parameter-Transfer-WS-QAOA.git``
 * ``cd Parameter-Transfer-WS-QAOA``
 * ``sudo -H pip install virtualenv`` (if you don't have virtualenv installed)
