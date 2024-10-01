@@ -1,6 +1,7 @@
 import os
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib.patches import Rectangle, FancyArrowPatch
 
 from calculations import *
 from plotting import *
@@ -64,5 +65,20 @@ plt.yticks(ticks, ylabels)
 ax.xaxis.tick_top()
 ax.xaxis.set_label_position('top')
 cbar.set_label('Transferability Coefficient', labelpad=-42)
-#plt.savefig('transferability_map.pdf')
-plt.show()
+
+lw = 2.5
+ax.add_patch(Rectangle(xy=(204.5,204.5), width=30, height=30, linewidth=lw, edgecolor='cyan', facecolor='None'))
+ax.annotate('A', xy=(219.5, 566), xytext=(219.5, 570), ha='center', va='center', xycoords='data', annotation_clip=False)
+ax.add_patch(Rectangle(xy=(277.5,333.5), width=56, height=40, linewidth=lw, edgecolor='cyan', facecolor='None'))
+ax.annotate('B', xy=(306.5, 566), xytext=(306.5, 570), ha='center', va='center', xycoords='data', annotation_clip=False)
+ax.add_patch(Rectangle(xy=(373.5,333.5), width=18, height=120, linewidth=lw, edgecolor='cyan', facecolor='None'))
+ax.annotate('C', xy=(381.5, 566), xytext=(381.5, 570), ha='center', va='center', xycoords='data', annotation_clip=False)
+
+#ax.annotate('A', xy=(353.5, 566), xytext=(353.5, 592),
+#            ha='center', va='bottom', xycoords='data', annotation_clip=False,
+#            arrowprops=dict(arrowstyle='-[, widthB=1.4, lengthB=.4', lw=1.0))
+#ax.annotate('A', xy=(564, 468.5), xytext=(582, 468.5),
+#            ha='center', va='center', xycoords='data', annotation_clip=False,
+#            arrowprops=dict(arrowstyle='-[, widthB=1.05, lengthB=.4', lw=1.0))
+plt.savefig('transferability_map_rect.pdf')
+#plt.show()
